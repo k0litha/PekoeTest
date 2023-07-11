@@ -5,7 +5,8 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
+import SplashScreen from 'react-native-splash-screen';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -62,6 +63,9 @@ function App(): JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  useEffect(() => {
+    SplashScreen.hide(); //hides the splash screen on app load.
+  }, []);
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
