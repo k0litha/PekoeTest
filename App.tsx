@@ -64,7 +64,7 @@ function App(): JSX.Element {
   };
 
   useEffect(() => {
-    SplashScreen.hide(); //hides the splash screen on app load.
+    //SplashScreen.hide(); //hides the splash screen on app load.
   }, []);
   return (
     <SafeAreaView style={backgroundStyle}>
